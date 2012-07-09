@@ -1,5 +1,5 @@
 
-all: clean run open
+all: clean process report open
 
 clean:
 	@rm -f ./build/months/*.csv
@@ -7,7 +7,10 @@ clean:
 	@rm -f ./build/db/*.db
 	@rm -f ./out/*.csv
 
-run:
+report:
+	@bin/report.bash
+
+process:
 	@bin/process.bash
 
 open:
